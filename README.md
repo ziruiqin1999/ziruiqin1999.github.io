@@ -1,35 +1,61 @@
-# Research Space
+# Ziruiqin Blog
 
-一个无构建步骤的静态个人博客，结构参考轻量个人空间：简介、文章、随笔、简历和联系方式。直接打开 `index.html` 就能预览，也可以部署到 GitHub Pages、Netlify、Vercel 或任意静态文件服务器。
+秦子睿的 GitHub Pages 个人博客。这个仓库使用 GitHub Pages 原生支持的 Jekyll，文章以 Markdown 文件放在 `_posts/` 目录中。
 
-## 文件
+## 常用文件
 
-- `index.html`：页面结构
-- `styles.css`：暗色视觉、响应式布局、卡片与弹窗样式
-- `script.js`：文章数据、随笔数据、搜索、筛选、阅读弹窗和简历弹窗
-- `assets/hero-research-desk.png`：首页封面图
+- `index.html`：首页、简介、随笔、简历和联系方式
+- `_posts/`：博客文章，每篇一个 Markdown 文件
+- `_layouts/default.html`：全站通用页面骨架
+- `_layouts/post.html`：文章详情页模板
+- `styles.css`：全站样式
+- `assets/`：图片和静态素材
+- `_config.yml`：站点标题、作者、链接和 Jekyll 配置
 
-## 修改内容
+## 新增一篇博客
 
-编辑 `script.js` 里的 `posts` 数组即可修改文章。每篇文章包含：
+在 `_posts/` 下创建文件，文件名格式必须是：
 
-- `title`
-- `date`
-- `category`
-- `tags`
-- `summary`
-- `body`
-
-编辑 `essays` 数组即可修改随笔卡片。
-
-联系方式、简历概览和首页简介在 `index.html` 里修改。
-
-## 本地预览
-
-可以直接双击打开 `index.html`，或在本目录运行：
-
-```bash
-python3 -m http.server 8080
+```text
+YYYY-MM-DD-title.md
 ```
 
-然后访问 `http://localhost:8080`。
+示例：
+
+```text
+_posts/2026-06-14-my-first-blog.md
+```
+
+文件内容示例：
+
+```markdown
+---
+title: "我的第一篇博客"
+date: 2026-06-14
+category: Research
+tags: [AI, robustness, paper-reading]
+summary: "这是一句会显示在首页卡片里的摘要。"
+---
+
+这里写正文。
+
+## 小标题
+
+- 要点 1
+- 要点 2
+```
+
+## 发布更新
+
+```bash
+cd /Users/ziruiqin/ziruiqin-blog
+git add .
+git commit -m "Update blog"
+GIT_SSH_COMMAND='ssh -i ~/.ssh/ziruiqin1999_github_pages_ed25519 -o IdentitiesOnly=yes' git push
+```
+
+推送后等待几十秒到几分钟，GitHub Pages 会自动更新：
+
+```text
+https://ziruiqin1999.github.io/
+```

@@ -1,0 +1,20 @@
+title: "秦子睿 | Research Space"
+description: "AI research notes, paper reading logs, life essays and PhD application thoughts."
+url: "https://ziruiqin1999.github.io"
+baseurl: ""
+lang: "zh-CN"
+timezone: "Asia/Tokyo"
+permalink: /posts/:year/:month/:day/:title/
+markdown: kramdown
+
+author:
+  name: "秦子睿"
+  email: "your.email@example.com"
+  github: "ziruiqin1999"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
