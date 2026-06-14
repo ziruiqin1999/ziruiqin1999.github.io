@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>秦子睿 | Research Space</title>
+    <meta
+      name="description"
+      content="秦子睿的个人静态博客，整理 AI 研究笔记、论文阅读、生活随笔、简历与联系方式。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#intro" aria-label="回到首页">
+        <span class="brand-mark">ZQ</span>
+        <span>Research Space</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#intro">简介</a>
+        <a href="#articles">文章</a>
+        <a href="#essays">随笔</a>
+        <a href="#resume">简历</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" id="intro">
+        <div class="profile-media">
+          <img src="assets/hero-research-desk.png" alt="AI 研究工作台照片" />
+        </div>
+        <div class="intro-copy">
+          <p class="kicker">Intro</p>
+          <h1>秦子睿</h1>
+          <p class="subtitle">Reliable AI / Multimodal Representation / Medical AI / Robotics</p>
+          <p>
+            这里整理我对可靠 AI、多模态表征学习、医疗/人本 AI 与未来机器人方向的长期学习记录，也收纳论文阅读、实验复盘、博士申请思考和一些生活片段。
+          </p>
+          <div class="quick-facts" aria-label="关注领域">
+            <p><span>focus</span> robustness / reliability / multimodal learning / medical AI</p>
+            <p><span>life</span> research notes / reading logs / weekly reflection / photos</p>
+            <p><span>site</span> 一个持续更新的个人知识库与生活切片。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section articles" id="articles">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Latest Notes</p>
+            <h2>近期文章</h2>
+          </div>
+          <label class="search">
+            <span class="sr-only">搜索文章</span>
+            <input id="searchInput" type="search" placeholder="搜索文章" />
+          </label>
+        </div>
+        <div class="filters" id="filters" aria-label="按主题筛选文章"></div>
+        <div class="article-grid" id="postGrid"></div>
+      </section>
+
+      <section class="section essays" id="essays">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Photo Essays</p>
+            <h2>随笔</h2>
+          </div>
+          <p>
+            这里不是正式相册，而是轻量记录：读论文后的状态、桌面的物件、申请季的片刻和偶尔的随手拍。
+          </p>
+        </div>
+        <div class="essay-strip" id="essayStrip"></div>
+      </section>
+
+      <section class="section resume" id="resume">
+        <div class="resume-overview">
+          <p class="kicker">Resume</p>
+          <h2>个人简历</h2>
+          <button class="text-button" id="resumeButton" type="button">详细简历 Download</button>
+        </div>
+        <div class="resume-tags" aria-label="简历概览">
+          <p><span>Research</span> Reliable AI / Medical AI / Multimodal Learning</p>
+          <p><span>Education</span> Hiroshima University / AI Master's Student</p>
+          <p><span>Engineering</span> Python / PyTorch / OpenCV / Research Prototypes</p>
+        </div>
+        <div class="resume-columns">
+          <article>
+            <h3>研究方向</h3>
+            <ul>
+              <li>鲁棒性、可靠性与分布偏移下的 AI 评价</li>
+              <li>多模态表征学习、医学图像理解与人本 AI</li>
+              <li>面向未来机器人的感知、决策与安全泛化问题</li>
+            </ul>
+          </article>
+          <article>
+            <h3>科研与工程</h3>
+            <ul>
+              <li>整理论文脉络、实验协议、失败案例和研究计划版本</li>
+              <li>使用 PyTorch、Python 与可视化工具构建研究原型</li>
+              <li>关注模型可靠性评估、校准、不确定性和实际部署风险</li>
+            </ul>
+          </article>
+          <article>
+            <h3>近期目标</h3>
+            <ul>
+              <li>完善博士申请方向、目标实验室和导师匹配度分析</li>
+              <li>持续产出论文阅读笔记、周报和可复用研究模板</li>
+              <li>把研究兴趣连接到医疗 AI 与机器人长期问题</li>
+            </ul>
+          </article>
+        </div>
+        <div class="resume-links">
+          <a href="#articles">查看技术文章</a>
+          <a href="https://github.com/" rel="noreferrer">GitHub</a>
+          <a href="mailto:your.email@example.com">Email</a>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <p class="kicker">Contact</p>
+        <h2>联系方式</h2>
+        <p>欢迎交流研究笔记、论文、项目想法、博士申请准备，或者单纯看看这个个人主页接下来会变成什么样。</p>
+        <div class="contact-grid">
+          <a href="mailto:your.email@example.com"><span>Email</span>your.email@example.com</a>
+          <a href="https://github.com/" rel="noreferrer"><span>GitHub</span>github.com/yourname</a>
+          <p><span>WeChat</span>按需填写</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="reader" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+        <button class="modal-close" id="readerClose" type="button" aria-label="关闭">×</button>
+        <p class="modal-meta" id="readerMeta"></p>
+        <h2 id="readerTitle"></h2>
+        <div id="readerBody"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="essayModal" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="essayTitle">
+        <button class="modal-close" id="essayClose" type="button" aria-label="关闭">×</button>
+        <p class="modal-meta" id="essayMeta"></p>
+        <h2 id="essayTitle"></h2>
+        <p id="essayBody"></p>
+      </div>
+    </div>
+
+    <div class="modal" id="resumeModal" aria-hidden="true">
+      <div class="modal-panel compact" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+        <button class="modal-close" id="resumeClose" type="button" aria-label="关闭">×</button>
+        <p class="modal-meta">Private CV</p>
+        <h2 id="resumeModalTitle">详细简历 Download</h2>
+        <label class="password-field">
+          <span>验证密码</span>
+          <input type="password" placeholder="请输入访问密码" />
+        </label>
+        <button class="download-button" type="button">验证并下载</button>
+        <p class="hint">这是静态示例。部署前可以把按钮改成真实 PDF 链接，或接入更严格的访问控制。</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>© 2026 秦子睿. Built as a quiet place for notes, research thoughts and life frames.</span>
+      <a href="#intro">回到顶部</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
